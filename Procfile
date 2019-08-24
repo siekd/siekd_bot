@@ -1,1 +1,1 @@
-worker: python Alarm_Bot.py
+worker: python Alarm.py
