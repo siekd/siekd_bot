@@ -1,9 +1,9 @@
-import time
+import time, os
 import telegram
 import urllib.request
 from bs4 import BeautifulSoup
 
-API_KEY = '914333031:AAEobLa1UpdCokJu5MzNpG8S6eALbl2Tu6M'
+API_KEY = os.environ["BOT_TOKEN"]
 bot = telegram.Bot(token=API_KEY)
 
 chat_id = '814915551'
