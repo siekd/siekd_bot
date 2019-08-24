@@ -5,8 +5,7 @@ from bs4 import BeautifulSoup
 
 last_file = ''
 
-access_token = os.environ['BOT_TOKEN']
-API_KEY = 'access_token'
+API_KEY = '914333031:AAEobLa1UpdCokJu5MzNpG8S6eALbl2Tu6M'
 bot = telegram.Bot(token=API_KEY)
 
 
@@ -42,6 +41,6 @@ while True:
                 bot.sendMessage(chat_id=chat_id, text=message)
         last_file = new
     else:
-      message = '업데이트 아직 안되었습니다.'
-                bot.sendMessage(chat_id=chat_id, text=message)
+        message = '업데이트 아직 안되었습니다.'
+        bot.sendMessage(chat_id=chat_id, text=message)
     time.sleep(5)
