@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 
 last_file = ''
 
-API_KEY = '914333031:AAEobLa1UpdCokJu5MzNpG8S6eALbl2Tu6M'
+access_token = os.environ['BOT_TOKEN']
+API_KEY = 'access_token'
 bot = telegram.Bot(token=API_KEY)
-
 
 chat_id = '814915551'
 
