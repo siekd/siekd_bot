@@ -9,6 +9,7 @@ access_token = os.environ['BOT_TOKEN']
 API_KEY = 'access_token'
 bot = telegram.Bot(token=API_KEY)
 
+
 chat_id = '814915551'
 
 Book_mark = ['데스러버', '액터쥬(act-age)', '나의 히어로 아카데미아',\
@@ -40,7 +41,4 @@ while True:
                 message = new + '가 업데이트 되었습니다.'
                 bot.sendMessage(chat_id=chat_id, text=message)
         last_file = new
-    else:
-        message = '업데이트 아직 안되었습니다.'
-        bot.sendMessage(chat_id=chat_id, text=message)
     time.sleep(10)
