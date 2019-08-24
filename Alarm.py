@@ -11,7 +11,7 @@ bot = telegram.Bot(token=API_KEY)
 
 
 chat_id = '814915551'
-bot.sendMessage(chat_id=chat_id, '')
+bot.sendMessage(chat_id=chat_id, 'wow')
 
 Book_mark = ['데스러버', '액터쥬(act-age)', '나의 히어로 아카데미아',\
              '원펀맨 리메이크', '전생현자의 이세계 라이프',\
