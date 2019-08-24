@@ -20,22 +20,23 @@ Book_mark = ['데스러버', '액터쥬(act-age)', '나의 히어로 아카데�
              '현자의 제자를 자칭하는 현자', '싫은 얼굴을 하면서',\
              '어서오세요 실력지상주의 교실에', '거미입니다만',\
              '누이 되는 자', '블랙 클로버']
-
-URL = 'https://manamoa12.net/bbs/board.php?bo_table=manga'
-req = urllib.request.Request(URL, headers={'User-Agent': 'Mozilla/5.0'})
-html = urllib.request.urlopen(req)
-bs = BeautifulSoup(html.read(), 'html.parser')
-
-new = bs.find('a', {'style': 'font-size:16px'})
-new = new.get_text()
-remove = new.rfind('화')
-if remove == -1:
-    remove = new.rfind('편')
-new = new[5:remove+1]
-
-if last_file != new:
-    for i in range(len(Book_mark)):
-        if Book_mark[i] in new:
-            message = new + '가 업데이트 되었습니다.'
-            bot.sendMessage(chat_id=chat_id, text=message)
-    os.environ['new_file'] = new
+while True:
+    URL = 'https://manamoa12.net/bbs/board.php?bo_table=manga'
+    req = urllib.request.Request(URL, headers={'User-Agent': 'Mozilla/5.0'})
+    html = urllib.request.urlopen(req)
+    bs = BeautifulSoup(html.read(), 'html.parser')
+    
+    new = bs.find('a', {'style': 'font-size:16px'})
+    new = new.get_text()
+    remove = new.rfind('화')
+    if remove == -1:
+        remove = new.rfind('편')
+    new = new[5:remove+1]
+    
+    if last_file != new:
+        for i in range(len(Book_mark)):
+            if Book_mark[i] in new:
+                message = new + '가 업데이트 되었습니다.'
+                bot.sendMessage(chat_id=chat_id, text=message)
+        os.environ['new_file'] = new
+    time.sleep(10)
