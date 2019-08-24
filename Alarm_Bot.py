@@ -8,7 +8,7 @@ bot = telegram.Bot(token=API_KEY)
 
 chat_id = '814915551'
 
-Book_mark = ['명탐정 코난', '액터쥬(act-age)', '아무튼 귀여워']
+Book_mark = ['명탐정 코난', '액터쥬(act-age)', '아무튼 귀여워', '센류소녀']
 
 while True:
     URL = 'https://manamoa12.net/bbs/board.php?bo_table=manga'
