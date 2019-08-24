@@ -3,7 +3,7 @@ import telegram
 import urllib.request
 from bs4 import BeautifulSoup
 
-last_file = os.environ.get('new_file')
+last_file = ''
 
 API_KEY = '914333031:AAEobLa1UpdCokJu5MzNpG8S6eALbl2Tu6M'
 bot = telegram.Bot(token=API_KEY)
@@ -38,5 +38,5 @@ while True:
             if Book_mark[i] in new:
                 message = new + '가 업데이트 되었습니다.'
                 bot.sendMessage(chat_id=chat_id, text=message)
-        os.environ['new_file'] = new
+        last_file = new
     time.sleep(10)
