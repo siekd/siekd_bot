@@ -52,4 +52,4 @@ while True:
         file.writelines(Upload_list)
 
     f.close()
-    time.sleep(60)
+    time.sleep(30)
