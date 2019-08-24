@@ -43,4 +43,4 @@ while True:
     else:
         message = '업데이트 아직 안되었습니다.'
         bot.sendMessage(chat_id=chat_id, text=message)
-    time.sleep(5)
+    time.sleep(10)
